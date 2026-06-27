@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetFinder - Join the Revolution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="../css/signup.css" rel="stylesheet">
+
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <!-- Animated background -->
+    <div class="bg-container">
+      <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+    </div>
+
+    <!-- Main container -->
+    <div class="glass-container w-full max-w-lg p-8 relative">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold animated-title space-grotesk mb-3">
+          PetFinder
+        </h1>
+        <p class="text-gray-300 text-lg font-medium">
+          Join the pet rescue revolution
+        </p>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Form -->
+      <form action="form" method="POST" id="signupForm" class="space-y-6">
+        <div class="input-group">
+          <input
+            type="text"
+            id="fullName"
+            name="full_Name"
+            class="input-field full_Name"
+            placeholder="Enter your full name"
+            required />
+          <label class="input-label" for="fullName">Full Name</label>
+        </div>
+
+        <div class="input-group">
+          <input
+            type="text"
+            id="username"
+            name="user_Name"
+            class="input-field user_Name"
+            placeholder="Choose a username"
+            required />
+          <label class="input-label" for="username">Username</label>
+          <div
+            class="username-error hidden mt-2 text-red-400 text-sm bg-red-500/10 p-2 rounded-lg border border-red-500/20">
+            Username already exists, please try another.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="input-group">
+            <input
+              type="password"
+              id="password"
+              name="user_Password"
+              class="input-field user_Password"
+              placeholder="Create a password"
+              required />
+            <label class="input-label" for="password">Password</label>
+            <div class="password-strength">
+              <div
+                class="strength-bar"
+                id="strengthBar"
+                style="width: 0%"></div>
+            </div>
+            <div
+              class="password-error hidden mt-2 text-red-400 text-sm bg-red-500/10 p-2 rounded-lg border border-red-500/20">
+              Password must be at least 6 characters long.
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirm_Password"
+              class="input-field confirm_Password"
+              placeholder="Confirm password"
+              required />
+            <label class="input-label" for="confirmPassword"
+              >Confirm Password</label
+            >
+            <div
+              class="confirm-error hidden mt-2 text-red-400 text-sm bg-red-500/10 p-2 rounded-lg border border-red-500/20">
+              Passwords do not match.
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary w-full" id="submitBtn">
+          <span>Create Account</span>
+        </button>
+      </form>
+
+      <!-- Footer -->
+      <p class="mt-8 text-center text-gray-400">
+        Already have an account?
+        <a
+          href="./signin.html"
+          class="text-purple-400 hover:text-purple-300 font-medium transition-colors duration-200 hover:underline">
+          Sign In
+        </a>
+      </p>
+    </div>
+
+
+    <!-- Include jQuery (from your original code) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Include your existing signup.js -->
+    <script src="../js/api/signup.js"></script>
+    <script src="../js/ui/signup-ui.js"></script>
+  </body>
+</html>
